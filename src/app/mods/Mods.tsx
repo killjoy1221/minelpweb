@@ -47,8 +47,8 @@ function Mods() {
     const { path } = useRouteMatch();
     return (
         <Switch>
-            <Route exact path={path} component={ModList} />
-            <Route exact path={`${path}/:id`} component={Mod} />
+            <Route exact path={path + "/"} component={ModList} />
+            <Route exact path={path + "/:id"} component={Mod} />
         </Switch>
     );
 }

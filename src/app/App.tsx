@@ -21,7 +21,7 @@ function App() {
                 <Header />
                 <Container id="content">
                     <Switch>
-                        <Route path={PUBLIC_URL} exact component={Home} />
+                        <Route path={PUBLIC_URL + "/"} exact component={Home} />
                         <Route path={PUBLIC_URL + "/mods"} component={Mods} />
                     </Switch>
                 </Container>
