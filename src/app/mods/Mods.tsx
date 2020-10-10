@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getMods, getModDetail } from "./modsService";
+import { InternalLink } from "../components";
 
 const { PUBLIC_URL } = process.env;
 
@@ -17,7 +18,9 @@ function ModList() {
             </div>
             {data?.mods.map((m) => (
                 <div key={m.name}>
-                    <a href={`${PUBLIC_URL}/mods/${m.id}`}>{m.name}</a>
+                    <InternalLink href={`${PUBLIC_URL}/mods/${m.id}`}>
+                        {m.name}
+                    </InternalLink>
                 </div>
             ))}
         </div>
